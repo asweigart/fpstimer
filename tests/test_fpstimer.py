@@ -32,19 +32,19 @@ def test_basic():
             timer = fpstimer.FPSTimer(testFps)
 
             start = time.time()
-            for i in range(testFps): # Run enough timer.fpsSleep() calls for 1 second.
+            for i in range(testFps): # Run enough timer.sleep() calls for 1 second.
                 pass
                 if random.randint(0, 1) == 1:
                     time.sleep(1 / (testFps * 2))
-                timer.fpsSleep()
+                timer.sleep()
             trialTime = time.time() - start
 
             assert trialTime < (1 + ACCEPTABLE_DEVIATION), 'Failed for testFps == %s, trialTime was %s' % (testFps, trialTime)
 
 def test_zero():
     timer = fpstimer.FPSTimer(60)
-    time.sleep(0.1) # 0.1 seconds is much longer than the 1/60 that fpsSleep() should at most pause for.
-    assert timer.fpsSleep() == 0 # fpsSleep() should therefore not have any pause.
+    time.sleep(0.1) # 0.1 seconds is much longer than the 1/60 that sleep() should at most pause for.
+    assert timer.sleep() == 0 # sleep() should therefore not have any pause.
 
 
 
