@@ -11,7 +11,7 @@ with io.open('README.md', encoding='utf-8') as fo:
     long_description = fo.read()
 
 setup(
-    name='FPS Timer',
+    name='fpstimer',
     version=version,
     url='https://github.com/asweigart/fpstimer',
     author='Al Sweigart',
