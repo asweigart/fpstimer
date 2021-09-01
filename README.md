@@ -22,3 +22,8 @@ For example, calling FPSTimer(10) creates a timer for 10 fps. Each "frame" shoul
     ...     # Do calculations/work for a single "frame" here.
     ...     timer.sleep() # Pause just enough to have a 1/60 second wait since last fpstSleep() call.
 
+
+Support
+-------
+
+If you find this project helpful and would like to support its development, [consider donating to its creator on Patreon](https://www.patreon.com/AlSweigart).
